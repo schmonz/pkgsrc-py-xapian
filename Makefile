@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2024/03/08 18:55:08 schmonz Exp $
+# $NetBSD: Makefile,v 1.16 2024/10/14 06:46:04 wiz Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${PKGNAME_MODULE}
 COMMENT=	Python bindings for Xapian search engine
@@ -6,7 +6,7 @@ HOMEPAGE=	https://xapian.org/docs/bindings/python/
 
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=7:../../textproc/py-sphinx
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 38
+PYTHON_VERSIONS_INCOMPATIBLE=	39 # py-sphinx
 
 CONFIGURE_ARGS+=	--with-python3 PYTHON3=${PYTHONBIN}
 
